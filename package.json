@@ -1,0 +1,11 @@
+{
+  "name": "sound-wave",
+  "version": "0.0.1",
+  "description": "Produces a PCM file with a sine sound wave of specified length and frequency.",
+  "main": "sound-wave.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexey Orlenko <eaglexrlnk@gmail.com>",
+  "license": "MIT"
+}
