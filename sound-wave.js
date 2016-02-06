@@ -11,7 +11,7 @@ const maxLevel = Math.pow(2, resolution - 1) - 1,
       }[resolution];
 
 function sineWave(frequency, duration) {
-    var samplesCount = duration * sampleRate,
+    var samplesCount = Math.floor(duration * sampleRate),
         array = new BinaryArray(samplesCount);
     
     for (var sampleNumber = 0; sampleNumber < samplesCount; sampleNumber++) {
@@ -26,7 +26,7 @@ function sineWave(frequency, duration) {
 
 function writePCM(filename, frequency, duration) {
     var array = sineWave(frequency, duration),
-        buffer = new Buffer(array);
+        buffer = new Buffer(array.buffer);
     fs.writeFile(filename, buffer, 'binary');
 }
 
